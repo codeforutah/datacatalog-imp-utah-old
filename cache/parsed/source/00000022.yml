@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: Labor Force, Employment, Unemployment and   Unemployment Rate
+:description: Labor Force, Employment, Unemployment and Unemployment Rate
 :downloads: 
 - :format: xls
   :url: http://governor.utah.gov/dea/historical%20data/laborforce06.xls
@@ -10,5 +10,5 @@
   :home_url: http://governor.utah.gov/gopb/
   :name: Governor's Office of Planning and Budget
 :source_type: dataset
-:title: "State and County Historical Economic Data:   Labor Force"
+:title: "State and County Historical Economic Data: Labor Force"
 :url: http://www.utah.gov/data/state_data_files.html?=22

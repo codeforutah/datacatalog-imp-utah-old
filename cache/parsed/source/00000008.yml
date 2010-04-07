@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: Gall bladder removals (in-patient and out-patient)   at Utah Hospitals
+:description: Gall bladder removals (in-patient and out-patient) at Utah Hospitals
 :downloads: 
 - :format: xls
   :url: http://health.utah.gov/myhealthcare/reports/2007/gallbladder/allTables.xls

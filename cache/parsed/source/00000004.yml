@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: Population Projections with Population by Area,   Gender and Selected Age Groups
+:description: Population Projections with Population by Area, Gender and Selected Age Groups
 :downloads: 
 - :format: xls
   :url: http://governor.utah.gov/dea/ERG/ERG2008/Selected%20Age.xls
@@ -10,5 +10,5 @@
   :home_url: http://governor.utah.gov/gopb/
   :name: Governor's Office of Planning and Budget
 :source_type: dataset
-:title: "Demographics Projections: Population by   Area, Gender and Selected Age Groups"
+:title: "Demographics Projections: Population by Area, Gender and Selected Age Groups"
 :url: http://www.utah.gov/data/state_data_files.html?=4

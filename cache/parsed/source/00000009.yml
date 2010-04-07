@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: "Average Hospital Charges for Adults 18 Years and   Over, Utah: 2006"
+:description: "Average Hospital Charges for Adults 18 Years and Over, Utah: 2006"
 :downloads: 
 - :format: xls
   :url: http://health.utah.gov/myhealthcare/reports/2007/heartUpdate/charges/heartFailure.xls

@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: Non-Agricultural Payroll Employment by NAICS   Industry
+:description: Non-Agricultural Payroll Employment by NAICS Industry
 :downloads: 
 - :format: xls
   :url: http://governor.utah.gov/dea/historical%20data/naicsemployment.xls
@@ -10,5 +10,5 @@
   :home_url: http://governor.utah.gov/gopb/
   :name: Governor's Office of Planning and Budget
 :source_type: dataset
-:title: "State and County Historical Economic Data:   Non-Agricultural Payroll Employment by NAICS"
+:title: "State and County Historical Economic Data: Non-Agricultural Payroll Employment by NAICS"
 :url: http://www.utah.gov/data/state_data_files.html?=24

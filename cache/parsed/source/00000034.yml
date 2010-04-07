@@ -1,7 +1,7 @@
 --- 
 :catalog_name: Utah.gov
 :catalog_url: http://www.utah.gov/data/
-:description: Part of a larger set of spacial data files that can   be found at http://www.co.weber.ut.us/wiki/index.php/Category:KMZ
+:description: Part of a larger set of spacial data files that can be found at http://www.co.weber.ut.us/wiki/index.php/Category:KMZ
 :downloads: 
 - :format: kml
   :url: http://www.co.weber.ut.us/wiki/images/9/9b/WeberCountyPrimeFarmlands.kmz
