@@ -1,5 +1,7 @@
 class SourcePuller
 
+  U = DataCatalog::Utility
+
   def initialize
     source_data = build_sources
     @source_iterator = source_data.each
@@ -20,30 +22,35 @@ class SourcePuller
     data_rows.delete(data_rows.first) # remove the row of headings
     i = 0
     data_rows.each do |row|
+      i += 1
       hash = {}
-      i = i + 1
       tds = row.children.reject { |c| c.name == 'text' }
-      hash[:title] = tds[0].text.strip
-      hash[:description] = tds[1].text.strip
+      hash[:title]        = U.single_line_clean(tds[0].text)
+      hash[:description]  = U.single_line_clean(tds[1].text)
       hash[:catalog_name] = "Utah.gov"
-      hash[:catalog_url] = "http://www.utah.gov/data/"
-      hash[:frequency] = "unknown"
-      hash[:source_type] = "dataset"
-      hash[:url] = "http://www.utah.gov/data/state_data_files.html?=" + i.to_s
+      hash[:catalog_url]  = "http://www.utah.gov/data/"
+      hash[:frequency]    = "unknown"
+      hash[:source_type]  = "dataset"
+      hash[:url]          = "http://www.utah.gov/data/state_data_files.html?=" + i.to_s
       
       downloads = {}
-      downloads[:csv] = extract_href(tds,2)
-      downloads[:xls] = extract_href(tds,3)
-      downloads[:xml] = extract_href(tds,4)
-      downloads[:kml] = extract_href(tds,5)
+      downloads[:csv] = extract_href(tds, 2)
+      downloads[:xls] = extract_href(tds, 3)
+      downloads[:xml] = extract_href(tds, 4)
+      downloads[:kml] = extract_href(tds, 5)
       
       hash[:downloads] = []
       downloads.each do |key,value|
-        hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s } unless (value.nil? || value == '')
+        unless (value.nil? || value == '')
+          hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s }
+        end
       end
       
       org_name, org_url = agency_from_url(downloads.values.compact!.first)
-      hash[:organization] = { :name => org_name, :home_url => org_url }
+      hash[:organization] = {
+        :name     => org_name,
+        :home_url => org_url
+      }
       
       utah_data << hash
     end
@@ -80,7 +87,9 @@ class SourcePuller
   end
 
   def extract_href(tds, i)
-    tds[i].children.first.attributes["href"].value if tds[i].children.first.class == Nokogiri::XML::Element
+    if tds[i].children.first.class == Nokogiri::XML::Element
+      tds[i].children.first.attributes["href"].value
+    end
   end
 
 end

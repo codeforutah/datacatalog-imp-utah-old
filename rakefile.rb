@@ -15,8 +15,8 @@ def setup
     :name         => "State of Utah Data Files",
     :uri          => "http://www.utah.gov/data/state_data_files.html",
     :pullers      => { 
-                      :source       => SourcePuller,
-                      :organization => OrganizationPuller
+      :source       => SourcePuller,
+      :organization => OrganizationPuller
     }
   })
 end
