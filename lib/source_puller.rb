@@ -32,18 +32,23 @@ class SourcePuller
       hash[:url]          = "http://www.utah.gov/data/state_data_files.html?=" + i.to_s
       
       downloads = {}
-      downloads[:csv] = extract_href(tds,2)
-      downloads[:xls] = extract_href(tds,3)
-      downloads[:xml] = extract_href(tds,4)
-      downloads[:kml] = extract_href(tds,5)
+      downloads[:csv] = extract_href(tds, 2)
+      downloads[:xls] = extract_href(tds, 3)
+      downloads[:xml] = extract_href(tds, 4)
+      downloads[:kml] = extract_href(tds, 5)
       
       hash[:downloads] = []
       downloads.each do |key,value|
-        hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s } unless (value.nil? || value == '')
+        unless (value.nil? || value == '')
+          hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s }
+        end
       end
       
       org_name, org_url = agency_from_url(downloads.values.compact!.first)
-      hash[:organization] = { :name => org_name, :home_url => org_url }
+      hash[:organization] = {
+        :name     => org_name,
+        :home_url => org_url
+      }
       
       utah_data << hash
     end
@@ -80,7 +85,9 @@ class SourcePuller
   end
 
   def extract_href(tds, i)
-    tds[i].children.first.attributes["href"].value if tds[i].children.first.class == Nokogiri::XML::Element
+    if tds[i].children.first.class == Nokogiri::XML::Element
+      tds[i].children.first.attributes["href"].value
+    end
   end
 
 end
