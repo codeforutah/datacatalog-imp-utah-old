@@ -1,5 +1,7 @@
 class SourcePuller
 
+  U = DataCatalog::Utility
+
   def initialize
     source_data = build_sources
     @source_iterator = source_data.each
@@ -20,11 +22,11 @@ class SourcePuller
     data_rows.delete(data_rows.first) # remove the row of headings
     i = 0
     data_rows.each do |row|
+      i += 1
       hash = {}
-      i = i + 1
       tds = row.children.reject { |c| c.name == 'text' }
-      hash[:title]        = tds[0].text.strip
-      hash[:description]  = tds[1].text.strip
+      hash[:title]        = U.single_line_clean(tds[0].text)
+      hash[:description]  = U.single_line_clean(tds[1].text)
       hash[:catalog_name] = "Utah.gov"
       hash[:catalog_url]  = "http://www.utah.gov/data/"
       hash[:frequency]    = "unknown"
