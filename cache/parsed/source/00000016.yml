@@ -1,0 +1,14 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: "A new interactive map of Snake Valley with all of the well data. West Desert Ground-Water Monitoring Network is almost complete and updates are available on a newly developed Google Earth\xE2\x84\xA2 interactive map"
+:downloads: 
+- :format: kml
+  :url: http://geology.utah.gov/esp/snake_valley_project/kmz/SVWMP.kmz
+:frequency: unknown
+:organization: 
+  :home_url: http://geology.utah.gov/
+  :name: Utah Geological Survey
+:source_type: dataset
+:title: Snake Valley Well Data
+:url: http://www.utah.gov/data/state_data_files.html?=16

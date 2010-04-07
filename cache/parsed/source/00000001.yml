@@ -1,0 +1,16 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: Average Wage in Utah (May 2008)
+:downloads: 
+- :format: xls
+  :url: http://jobs.utah.gov/opencms/wi/statewide/statewidewage.xls
+- :format: csv
+  :url: http://jobs.utah.gov/opencms/wi/statewide/statewidewage.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://jobs.utah.gov/
+  :name: Department of Workforce Services
+:source_type: dataset
+:title: Average Wage Information
+:url: http://www.utah.gov/data/state_data_files.html?=1

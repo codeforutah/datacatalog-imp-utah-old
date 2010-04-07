@@ -1,0 +1,16 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: Comparison of Death Rates at Utah Hospitals for Hip   Replacement Patients
+:downloads: 
+- :format: xls
+  :url: http://health.utah.gov/myhealthcare/reports/2007/hipUpdate/quality/hipReplacement.xls
+- :format: csv
+  :url: http://health.utah.gov/myhealthcare/reports/2007/hipUpdate/quality/hipReplacement.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://health.utah.gov/
+  :name: Utah Department of Health
+:source_type: dataset
+:title: Hip Replacement Deaths in Utah Hospitals
+:url: http://www.utah.gov/data/state_data_files.html?=10

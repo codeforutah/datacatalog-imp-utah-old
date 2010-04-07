@@ -1,0 +1,14 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: Total Non-Agricultural Wages and Salaries (SIC)
+:downloads: 
+- :format: xls
+  :url: http://governor.utah.gov/dea/historical%20data/sicwages.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://governor.utah.gov/gopb/
+  :name: Governor's Office of Planning and Budget
+:source_type: dataset
+:title: "State and County Historical Economic Data:   Total Non-Agricultural Wages and Salaries (SIC)"
+:url: http://www.utah.gov/data/state_data_files.html?=28

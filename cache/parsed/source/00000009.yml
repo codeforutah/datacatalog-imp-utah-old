@@ -1,0 +1,16 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: "Average Hospital Charges for Adults 18 Years and   Over, Utah: 2006"
+:downloads: 
+- :format: xls
+  :url: http://health.utah.gov/myhealthcare/reports/2007/heartUpdate/charges/heartFailure.xls
+- :format: csv
+  :url: http://health.utah.gov/myhealthcare/reports/2007/heartUpdate/charges/heartFailure.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://health.utah.gov/
+  :name: Utah Department of Health
+:source_type: dataset
+:title: Heart Failure Rates at Utah Hospitals
+:url: http://www.utah.gov/data/state_data_files.html?=9

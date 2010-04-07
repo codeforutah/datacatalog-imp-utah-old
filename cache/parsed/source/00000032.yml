@@ -1,0 +1,14 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: The Well and Spring database contains data of 2981   wells, springs, and miscellaneous sites such as collector wells and mines.
+:downloads: 
+- :format: xls
+  :url: http://geology.utah.gov/emp/geothermal/wells_springs_database/ut_wells_springs_data.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://geology.utah.gov/
+  :name: Utah Geological Survey
+:source_type: dataset
+:title: Utah Wells and Springs
+:url: http://www.utah.gov/data/state_data_files.html?=32

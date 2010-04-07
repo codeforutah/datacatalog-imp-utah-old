@@ -1,0 +1,14 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: Explore geological sites in Utah with Google Earth.
+:downloads: 
+- :format: kml
+  :url: http://geology.utah.gov/google_earth/kml_kmz/ugs_geosights.kmz
+:frequency: unknown
+:organization: 
+  :home_url: http://geology.utah.gov/
+  :name: Utah Geological Survey
+:source_type: dataset
+:title: Utah GeoSights
+:url: http://www.utah.gov/data/state_data_files.html?=30

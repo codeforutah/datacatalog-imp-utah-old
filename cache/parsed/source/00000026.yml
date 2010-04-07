@@ -1,0 +1,14 @@
+--- 
+:catalog_name: Utah.gov
+:catalog_url: http://www.utah.gov/data/
+:description: Residential Building Permits
+:downloads: 
+- :format: xls
+  :url: http://governor.utah.gov/dea/historical%20data/buildingpermits.xls
+:frequency: unknown
+:organization: 
+  :home_url: http://governor.utah.gov/gopb/
+  :name: Governor's Office of Planning and Budget
+:source_type: dataset
+:title: "State and County Historical Economic Data:   Residential Building Permits"
+:url: http://www.utah.gov/data/state_data_files.html?=26
