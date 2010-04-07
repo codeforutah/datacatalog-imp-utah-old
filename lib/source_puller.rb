@@ -23,13 +23,13 @@ class SourcePuller
       hash = {}
       i = i + 1
       tds = row.children.reject { |c| c.name == 'text' }
-      hash[:title] = tds[0].text.strip
-      hash[:description] = tds[1].text.strip
+      hash[:title]        = tds[0].text.strip
+      hash[:description]  = tds[1].text.strip
       hash[:catalog_name] = "Utah.gov"
-      hash[:catalog_url] = "http://www.utah.gov/data/"
-      hash[:frequency] = "unknown"
-      hash[:source_type] = "dataset"
-      hash[:url] = "http://www.utah.gov/data/state_data_files.html?=" + i.to_s
+      hash[:catalog_url]  = "http://www.utah.gov/data/"
+      hash[:frequency]    = "unknown"
+      hash[:source_type]  = "dataset"
+      hash[:url]          = "http://www.utah.gov/data/state_data_files.html?=" + i.to_s
       
       downloads = {}
       downloads[:csv] = extract_href(tds,2)
