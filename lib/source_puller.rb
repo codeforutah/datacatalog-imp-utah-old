@@ -86,10 +86,9 @@ class SourcePuller
     end
   end
 
-  def extract_href(tds, i)
-    if tds[i].children.first.class == Nokogiri::XML::Element
-      tds[i].children.first.attributes["href"].value
-    end
+  def extract_href(nodes, i)
+    a_tag = nodes[i].css("a").first
+    a_tag["href"] if a_tag
   end
 
 end
