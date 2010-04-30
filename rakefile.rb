@@ -8,7 +8,7 @@ def setup
   env = ENV['IMPORTER_ENV']
   raise "IMPORTER_ENV undefined" unless env
   raise "IMPORTER_ENV invalid" unless config[env]
-  DataCatalog::Importer::Tasks.new({
+  DataCatalog::ImporterFramework::Tasks.new({
     :api_key      => config[env]['api_key'],
     :base_uri     => config[env]['base_uri'],
     :cache_folder => File.dirname(__FILE__) + '/cache/parsed',
