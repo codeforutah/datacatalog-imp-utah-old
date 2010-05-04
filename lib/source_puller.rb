@@ -1,6 +1,6 @@
 class SourcePuller
 
-  U = DataCatalog::Utility
+  U = DataCatalog::ImporterFramework::Utility
 
   def initialize
     source_data = build_sources
