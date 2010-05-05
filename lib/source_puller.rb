@@ -10,11 +10,11 @@ class SourcePuller
   def fetch
     @source_iterator.next
   rescue StopIteration
-    return nil    
+    return nil
   end
     
   protected
-
+  
   def build_sources
     doc = U.parse_html_from_uri('http://www.utah.gov/data/state_data_files.html')
     utah_data = []
