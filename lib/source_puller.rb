@@ -40,9 +40,12 @@ class SourcePuller
       downloads[:kml] = extract_href(tds, 5)
       
       hash[:downloads] = []
-      downloads.each do |key,value|
-        unless (value.nil? || value == '')
-          hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s }
+      downloads.each do |key, value|
+        unless value == ''
+          hash[:downloads] << {
+            :url    => value,
+            :format => key.to_s
+          }
         end
       end
       
@@ -55,14 +58,6 @@ class SourcePuller
       utah_data << hash
     end
     utah_data
-  end
-  
-  def verify_http(url)
-    if url =~ /http/
-      url
-    else
-      'http://'+ url
-    end
   end
 
   def agency_from_url(url)
@@ -88,7 +83,11 @@ class SourcePuller
 
   def extract_href(nodes, i)
     a_tag = nodes[i].css("a").first
-    a_tag["href"] if a_tag
+    if a_tag
+      U.normalize_url(U.single_line_clean(a_tag["href"]))
+    else
+      ""
+    end
   end
 
 end
