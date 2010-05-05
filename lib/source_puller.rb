@@ -16,7 +16,7 @@ class SourcePuller
   protected
 
   def build_sources
-    doc = Nokogiri.HTML(open('http://www.utah.gov/data/state_data_files.html'))
+    doc = U.parse_html_from_uri('http://www.utah.gov/data/state_data_files.html')
     utah_data = []
     data_rows = doc.css('div#main table tr')
     data_rows.delete(data_rows.first) # remove the row of headings
