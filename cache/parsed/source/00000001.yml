@@ -3,9 +3,9 @@
 :catalog_url: http://www.utah.gov/data/
 :description: Average Wage in Utah (May 2008)
 :downloads: 
-- :format: csv
-  :url: http://jobs.utah.gov/opencms/wi/statewide/statewidewage.xls
 - :format: xls
+  :url: http://jobs.utah.gov/opencms/wi/statewide/statewidewage.xls
+- :format: csv
   :url: http://jobs.utah.gov/opencms/wi/statewide/statewidewage.xls
 :frequency: unknown
 :organization: 
