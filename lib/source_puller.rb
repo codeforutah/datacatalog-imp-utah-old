@@ -1,8 +1,11 @@
+require File.dirname(__FILE__) + '/agency_lookup'
+
 class SourcePuller
 
   U = DataCatalog::ImporterFramework::Utility
 
   def initialize
+    @agency_lookup = AgencyLookup.read
     source_data = build_sources
     @source_iterator = source_data.each
   end
@@ -10,13 +13,13 @@ class SourcePuller
   def fetch
     @source_iterator.next
   rescue StopIteration
-    return nil    
+    return nil
   end
     
   protected
-
+  
   def build_sources
-    doc = Nokogiri.HTML(open('http://www.utah.gov/data/state_data_files.html'))
+    doc = U.parse_html_from_uri('http://www.utah.gov/data/state_data_files.html')
     utah_data = []
     data_rows = doc.css('div#main table tr')
     data_rows.delete(data_rows.first) # remove the row of headings
@@ -40,13 +43,17 @@ class SourcePuller
       downloads[:kml] = extract_href(tds, 5)
       
       hash[:downloads] = []
-      downloads.each do |key,value|
-        unless (value.nil? || value == '')
-          hash[:downloads] << { :url => verify_http(value.strip), :format => key.to_s }
+      downloads.each do |key, value|
+        if value
+          hash[:downloads] << {
+            :url    => value,
+            :format => key.to_s
+          }
         end
       end
       
-      org_name, org_url = agency_from_url(downloads.values.compact!.first)
+      org_url = downloads.values.compact!.first
+      org_name, org_url = org_from_url(org_url)
       hash[:organization] = {
         :name     => org_name,
         :home_url => org_url
@@ -56,39 +63,24 @@ class SourcePuller
     end
     utah_data
   end
-  
-  def verify_http(url)
-    if url =~ /http/
-      url
-    else
-      'http://'+ url
-    end
-  end
 
-  def agency_from_url(url)
-    case url
-    when /jobs\.utah\.gov/
-      ["Department of Workforce Services","http://jobs.utah.gov/"]
-    when /governor\.utah\.gov\/dea/
-      ["Governor's Office of Planning and Budget","http://governor.utah.gov/gopb/"]
-    when /geology\.utah\.gov/
-      ["Utah Geological Survey","http://geology.utah.gov/"]
-    when /health\.utah\.gov/
-      ["Utah Department of Health","http://health.utah.gov/"]
-    when /e911\.utah\.gov/
-      ["Utah 911 Committee","http://e911.utah.gov/"]
-    when /mesowest/
-      ["MesoWest","http://mesowest.utah.edu/" ]
-    when /weber\.ut\.us/
-      ["Weber County, Utah","http://weber.ut.us/"]
-    else
-      ["Utah","http://www.utah.gov/"]
+  def org_from_url(url)
+    @agency_lookup.each do |item|
+      if Regexp.new(item['match']) =~ url
+        return [item['name'], item['url']]
+      end
     end
+    puts "No match for #{url} - using default."
+    ["Utah", "http://www.utah.gov"]
   end
 
   def extract_href(nodes, i)
     a_tag = nodes[i].css("a").first
-    a_tag["href"] if a_tag
+    if a_tag
+      U.normalize_url(U.single_line_clean(a_tag["href"]))
+    else
+      nil
+    end
   end
 
 end
