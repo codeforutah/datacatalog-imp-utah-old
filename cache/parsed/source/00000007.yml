@@ -4,10 +4,12 @@
 :description: A directory of companies in Salt Lake County
 :downloads: 
 - :format: csv
-  :url: http://jobs.utah.gov/jsp/firmfind/csvfiles/ffind_saltlake.csv
+  :url: !str 
+    str: http://jobs.utah.gov/jsp/firmfind/csvfiles/ffind_saltlake.csv
+    "@_rails_html_safe": false
 :frequency: unknown
 :organization: 
-  :home_url: http://jobs.utah.gov/
+  :home_url: http://jobs.utah.gov
   :name: Department of Workforce Services
 :source_type: dataset
 :title: Firmfind - SLC

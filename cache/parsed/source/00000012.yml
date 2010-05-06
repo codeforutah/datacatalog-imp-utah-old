@@ -4,10 +4,12 @@
 :description: List of Public Safety Answering Points (PSAPS) in Utah. These centers respond to 911 calls and provide dispatch services for law enforcement in Utah
 :downloads: 
 - :format: xls
-  :url: http://www.e911.utah.gov/docsfile/MasterPSAPRegistryV2.4_utah_only.xls
+  :url: !str 
+    str: http://www.e911.utah.gov/docsfile/MasterPSAPRegistryV2.4_utah_only.xls
+    "@_rails_html_safe": false
 :frequency: unknown
 :organization: 
-  :home_url: http://e911.utah.gov/
+  :home_url: http://e911.utah.gov
   :name: Utah 911 Committee
 :source_type: dataset
 :title: Master PSAP Registry 2009

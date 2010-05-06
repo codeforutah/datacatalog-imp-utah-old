@@ -4,10 +4,12 @@
 :description: Non-Agricultural Payroll Employment by SIC Industry
 :downloads: 
 - :format: xls
-  :url: http://governor.utah.gov/dea/historical%20data/sicemployment.xls
+  :url: !str 
+    str: http://governor.utah.gov/dea/historical%20data/sicemployment.xls
+    "@_rails_html_safe": false
 :frequency: unknown
 :organization: 
-  :home_url: http://governor.utah.gov/gopb/
+  :home_url: http://governor.utah.gov/gopb
   :name: Governor's Office of Planning and Budget
 :source_type: dataset
 :title: "State and County Historical Economic Data: Non Agricultural Payroll by SIC"

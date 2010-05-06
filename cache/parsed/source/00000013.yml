@@ -4,10 +4,12 @@
 :description: Surface weather observations from MesoWest (Univ. of Utah) and RTMA images of surface temperature, moisture, wind, and precipitation
 :downloads: 
 - :format: kml
-  :url: http://mesowest.utah.edu/data/load_mesowest.kmz
+  :url: !str 
+    str: http://mesowest.utah.edu/data/load_mesowest.kmz
+    "@_rails_html_safe": false
 :frequency: unknown
 :organization: 
-  :home_url: http://mesowest.utah.edu/
+  :home_url: http://mesowest.utah.edu
   :name: MesoWest
 :source_type: dataset
 :title: MesoWest Surface Weather

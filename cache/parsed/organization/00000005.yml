@@ -1,9 +1,8 @@
 --- 
 :catalog_url: http://www.utah.gov/data/
 :description: ""
-:home_url: http://e911.utah.gov/
 :name: Utah 911 Committee
 :org_type: governmental
 :organization: 
   :name: Utah
-:url: http://e911.utah.gov/
+:url: http://e911.utah.gov

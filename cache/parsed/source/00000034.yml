@@ -4,10 +4,12 @@
 :description: Part of a larger set of spacial data files that can be found at http://www.co.weber.ut.us/wiki/index.php/Category:KMZ
 :downloads: 
 - :format: kml
-  :url: http://www.co.weber.ut.us/wiki/images/9/9b/WeberCountyPrimeFarmlands.kmz
+  :url: !str 
+    str: http://www.co.weber.ut.us/wiki/images/9/9b/WeberCountyPrimeFarmlands.kmz
+    "@_rails_html_safe": false
 :frequency: unknown
 :organization: 
-  :home_url: http://weber.ut.us/
+  :home_url: http://weber.ut.us
   :name: Weber County, Utah
 :source_type: dataset
 :title: Weber County Prime Farmland

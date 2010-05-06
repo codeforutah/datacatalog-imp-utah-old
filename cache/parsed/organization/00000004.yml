@@ -1,9 +1,8 @@
 --- 
 :catalog_url: http://www.utah.gov/data/
 :description: ""
-:home_url: http://health.utah.gov/
 :name: Utah Department of Health
 :org_type: governmental
 :organization: 
   :name: Utah
-:url: http://health.utah.gov/
+:url: http://health.utah.gov
