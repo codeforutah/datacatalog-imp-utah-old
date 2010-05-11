@@ -1,3 +1,4 @@
+require 'rubygems'
 require File.dirname(__FILE__) + '/lib/init'
 require File.dirname(__FILE__) + '/lib/organization_puller'
 require File.dirname(__FILE__) + '/lib/source_puller'
