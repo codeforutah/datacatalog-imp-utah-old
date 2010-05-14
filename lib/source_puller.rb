@@ -30,7 +30,7 @@ class SourcePuller
       tds = row.children.reject { |c| c.name == 'text' }
       hash[:title]        = U.single_line_clean(tds[0].text)
       hash[:description]  = U.single_line_clean(tds[1].text)
-      hash[:catalog_name] = "Utah.gov"
+      hash[:catalog_name] = "utah.gov"
       hash[:catalog_url]  = "http://www.utah.gov/data/"
       hash[:frequency]    = "unknown"
       hash[:source_type]  = "dataset"
