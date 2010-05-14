@@ -21,6 +21,7 @@ class OrganizationPuller
         :organization => { :name => "Utah" },
         :description  => "",
         :org_type     => "governmental",
+        :catalog_name => "utah.gov",
         :catalog_url  => "http://www.utah.gov/data/"
       }
     end
